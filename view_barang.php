@@ -4,7 +4,7 @@ include "koneksi.php";
 ?>
 
 <a href ="input_barang.php" class="btn btn-danger">Tambah Barang</a>
-<table class="table table-dark">
+<table class="table table-dark" border="1">
 	<tr>
 		<td>No</td>
 		<td>Nama</td>
