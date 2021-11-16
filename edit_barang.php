@@ -42,4 +42,3 @@ $tampil=mysqli_fetch_array($data_dari_tampil_barang);
 	</table>
 </form>
 </form>
-			

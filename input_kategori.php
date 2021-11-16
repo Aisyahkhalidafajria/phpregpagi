@@ -1,3 +1,26 @@
+<html>
+<head>
+	<title>Halaman admin</title>
+</head>
+<body>
+	<?php 
+	session_start();
+
+
+	if($_SESSION['level']==""){
+		header("location:index.php?pesan=gagal");
+	}
+
+	?>
+
+	<p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
+	<a href="logout.php">LOGOUT</a>
+
+	<br/>
+	<br/>
+
+</body>
+
 <?php
 include "koneksi.php";
 
@@ -6,8 +29,7 @@ if (isset($_POST['save'])) {
         $query=mysqli_query($koneksi,"insert into kategori(nama_barang)
         value ('$nama_barang')"); 
 if($query) {
-    header ("location:view_kategori.php"); //ini yang bakal tampil di database setelah di isi
-} else {
+    header ("location:view_kategori.php"); 
     echo mysqli_error ();
 
 }   
@@ -28,3 +50,5 @@ if($query) {
 		</tr>
 </table>
 </form>
+
+</html>
